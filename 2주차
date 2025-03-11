@@ -88,7 +88,7 @@ void loop()
   delayMicroseconds(10); // 10 마이크로초 만큼 대기
   digitalWrite(TRIG, LOW); // 초음파 발생 종료
   
-  duration = pulseIn(ECHO, HIGH); // pulseIn:  HIGH -> LOW, LOW -> HIGH로 변하는 시간 축정 (여기서는 HIGH 신호가 얼마나 지속되는지 측정한다.)
+  duration = pulseIn(ECHO, HIGH); // pulseIn:  HIGH -> LOW, LOW -> HIGH로 변하는 시간 측정 (여기서는 HIGH 신호가 얼마나 지속되는지 측정한다.)
   distance = duration * 17 /1000; // 지속시간을 거리로 변환 (cm 단위)
   Serial.println(duration); // 초음파 반사 시간 출력
   Serial.print("\nDistance : ");
