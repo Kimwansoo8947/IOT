@@ -4,7 +4,6 @@
 int led_r = 7; // 전역 변수 (7번 핀에 연결된 빨간색 LED 제어하기 위한 전역 변수)
 void setup()
 {
-  pinMode(LED_BUILTIN, OUTPUT); // 내장 LED를 output 모드로 설정
   pinMode(7, OUTPUT); // 7번을 output 모드로 함
  
 }
