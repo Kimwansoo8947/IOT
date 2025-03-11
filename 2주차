@@ -13,10 +13,10 @@ void loop()
 
  // 아날로그 read는 존재하지 않고,  write는 존재한다.
   digitalWrite(7, HIGH); // 빨간색 LED를 켠다.
-  delay(1000); // Wait for 1000 millisecond(s) // 1초 동안 대기
+  delay(1000); // Wait for 1000 millisecond(s) 1초 동안 대기
 
   digitalWrite(7, LOW); // 빨간색 LED를 끈다.
-  delay(1000); // Wait for 1000 millisecond(s) // 1초 동안 대기
+  delay(1000); // Wait for 1000 millisecond(s) 1초 동안 대기
 
 
   
@@ -39,11 +39,11 @@ void loop()
 { 
  // 아날로그 read는 존재하지 않고,  write는 존재한다.
   digitalWrite(7, HIGH); // 빨간색 LED를 켠다.
-  delay(1000); // Wait for 1000 millisecond(s) 
+  delay(1000); // Wait for 1000 millisecond(s) 1초 동안 대기
   digitalWrite(7, LOW); // 빨간색 LED를 끈다.
 
   digitalWrite(9, HIGH); // 초록색 LED를 켠다.
-  delay(1000); // Wait for 1000 millisecond(s)
+  delay(1000); // Wait for 1000 millisecond(s) 1초 동안 대기
   digitalWrite(9, LOW); // 초록색 LED를 끈다.
 
 
@@ -72,7 +72,7 @@ void loop()
   long duration, distance;
   
   digitalWrite(TRIG, LOW);  //  초음파를 비활성화 
-  delayMicroseconds(2); //delay(2) 2 마이크로초 대기
+  delayMicroseconds(2); //delay(2) 2 마이크로 초 대기
   
   digitalWrite(TRIG, HIGH); // 초음파 발생
   delayMicroseconds(10); // 10 마이크로초 만큼 대기
@@ -87,11 +87,11 @@ void loop()
 
   // 아날로그 read는 존재하지 않고,  write는 존재한다.
   digitalWrite(7, HIGH); // 빨간색 LED를 켠다.
-  delay(1000); // Wait for 1000 millisecond(s) 
+  delay(1000); // Wait for 1000 millisecond(s) 1초 동안 대기
   digitalWrite(7, LOW); // 빨간색 LED를 끈다.
 
   digitalWrite(9, HIGH); // 초록색 LED를 켠다.
-  delay(1000); // Wait for 1000 millisecond(s)
+  delay(1000); // Wait for 1000 millisecond(s) 1초 동안 대기
   digitalWrite(9, LOW); // 초록색 LED를 끈다.
 
   
