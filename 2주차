@@ -4,17 +4,17 @@
 int led_r = 7; // 전역 변수 (7번 핀에 연결된 빨간색 LED 제어하기 위한 전역 변수)
 void setup()
 {
-  pinMode(7, OUTPUT); // 7번을 output 모드로 함
+  pinMode(led_r, OUTPUT); // 7번을 output 모드로 함
  
 }
 void loop()
 {
 
  // 아날로그 read는 존재하지 않고,  write는 존재한다.
-  digitalWrite(7, HIGH); // 빨간색 LED를 켠다.
+  digitalWrite(led_r, HIGH); // 빨간색 LED를 켠다.
   delay(1000); // Wait for 1000 millisecond(s) 1초 동안 대기
 
-  digitalWrite(7, LOW); // 빨간색 LED를 끈다.
+  digitalWrite(led_r, LOW); // 빨간색 LED를 끈다.
   delay(1000); // Wait for 1000 millisecond(s) 1초 동안 대기
 
 
@@ -29,21 +29,21 @@ int led_g = 9;  // 전역 변수 (9번 핀에 연결된 초록색 LED 제어하�
 void setup()
 {
 
-  pinMode(7, OUTPUT); // 7번을 output 모드로 함
-  pinMode(9, OUTPUT); // 9번을 output 모드로 함
+  pinMode(led_r, OUTPUT); // 7번을 output 모드로 함
+  pinMode(led_g, OUTPUT); // 9번을 output 모드로 함
  
 }
 
 void loop()
 { 
  // 아날로그 read는 존재하지 않고,  write는 존재한다.
-  digitalWrite(7, HIGH); // 빨간색 LED를 켠다.
+  digitalWrite(led_r, HIGH); // 빨간색 LED를 켠다.
   delay(1000); // Wait for 1000 millisecond(s) 1초 동안 대기
-  digitalWrite(7, LOW); // 빨간색 LED를 끈다.
+  digitalWrite(led_r, LOW); // 빨간색 LED를 끈다.
 
-  digitalWrite(9, HIGH); // 초록색 LED를 켠다.
+  digitalWrite(led_g, HIGH); // 초록색 LED를 켠다.
   delay(1000); // Wait for 1000 millisecond(s) 1초 동안 대기
-  digitalWrite(9, LOW); // 초록색 LED를 끈다.
+  digitalWrite(led_g, LOW); // 초록색 LED를 끈다.
 
 
   
@@ -59,8 +59,8 @@ int led_g = 9; // 전역 변수 (9번 핀에 연결된 초록색 LED 제어하�
 void setup()
 {
   Serial.begin(9600); 
-  pinMode(7, OUTPUT); // 7번을 output 모드로 함
-  pinMode(9, OUTPUT); // 9번을 output 모드로 함
+  pinMode(led_r, OUTPUT); // 7번을 output 모드로 함
+  pinMode(led_g, OUTPUT); // 9번을 output 모드로 함
   pinMode(TRIG, OUTPUT); // TRIG 핀을 출력 모드로 설정
   pinMode(ECHO, INPUT); // ECHO 핀을 입력 모드로 설정
  
@@ -85,13 +85,13 @@ void loop()
   Serial.println(" Cm");
 
   // 아날로그 read는 존재하지 않고,  write는 존재한다.
-  digitalWrite(7, HIGH); // 빨간색 LED를 켠다.
+  digitalWrite(led_r, HIGH); // 빨간색 LED를 켠다.
   delay(1000); // Wait for 1000 millisecond(s) 1초 동안 대기
-  digitalWrite(7, LOW); // 빨간색 LED를 끈다.
+  digitalWrite(led_r, LOW); // 빨간색 LED를 끈다.
 
-  digitalWrite(9, HIGH); // 초록색 LED를 켠다.
+  digitalWrite(led_g, HIGH); // 초록색 LED를 켠다.
   delay(1000); // Wait for 1000 millisecond(s) 1초 동안 대기
-  digitalWrite(9, LOW); // 초록색 LED를 끈다.
+  digitalWrite(led_g, LOW); // 초록색 LED를 끈다.
 
   
 }
