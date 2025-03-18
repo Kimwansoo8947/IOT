@@ -83,3 +83,61 @@ void loop() {
 
 
 }
+
+Serial && influxdb 저장 미들웨어 예제 코드 (Python)
+from influxdb_client import InfluxDBClient
+import time
+import serial
+
+# InfluxDB 2.X 설정
+influxdb_url = "http://localhost:8086/"
+influxdb_token = "fR12UYIhaWDLN3XZZfx0hGqNgmwJ9ay7v2WRiw8Tn_YoWgv5zvBJAnpKC6UQyc8koUzZg0GOT2RCLYMEZR0u6Q=="
+influxdb_org = "test"
+influxdb_bucket = "dust"
+
+# Aduino 시리얼 포트 설정
+serial_port = "COM6"
+baudrate = 9600
+timeout = 2
+
+# InfluxDB2.0 클라이언트 설정
+client = InfluxDBClient(url=influxdb_url,token=influxdb_token, org=influxdb_org)
+write_api = client.write_api()
+
+# 시리얼 포트 열기
+try:
+    ser = serial.Serial(serial_port, baudrate, timeout = timeout)
+    print(f"Connected to {serial_port} at {baudrate} baud")
+except serial.SerialException:
+    print("Falied to connect to serial port")
+    exit()
+
+# 시리얼 데이터 읽기 및 InfluxDB 저장
+try:
+    while True:
+        if ser.in_waiting > 0:
+            line = ser.readline().decode('utf-8').strip() # 시리얼 데이터 읽기
+            print(f"Received: {line}")
+
+            # 데이터가 "temperature=25.3" 같은 형식이라고 가정
+            if "=" in line:
+                key, value = line.split("=")
+
+                try:
+                    value = float(value) # 숫자로 변환
+                    # InfluxDB2.x 데이터 포맷
+                    data = f"sensor_data,device=arduino {key}={value}"
+                    write_api.write(bucket=influxdb_bucket, record=data)
+                    print(f"Data written to InfluxDB: {key}={value}")
+
+                except ValueError:
+                        print("Invallid data format")
+
+            time.sleep(1) # 1초 대기
+
+
+except KeyboardInterrupt:
+    print("Stopping data collection...")
+
+finally:
+    ser.close()
