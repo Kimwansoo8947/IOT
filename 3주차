@@ -1,1 +1,85 @@
+// 3월 18일 수업 내용 정리 (3주차)
 
+InfluxDB
+- 시계열 데이터베이스: 시간에 따라 변화하는 데이터를 효과적으로 저장하고 관리하는데 최적화된 데이터베이스
+
+InfluxDB 주요 특징
+- 시계열 데이터 저장
+- 고속 데이터 삽입 및 검색  ex) IOT
+- SQL과 비슷한 질의 언어 지원
+- 태그 기반 데이터 저장 (태그를 사용하면 검색 속도가 빨라진다.)
+
+리눅스. => 현재폴더
+cd..: 상위폴더
+ls: 폴더랑 파일 리스트
+
+PS C:\WINDOWS\system32> cd..
+PS C:\WINDOWS> cd..
+PS C:\> cd -path 'C:\Program Files\InfluxData\influxdb\'
+PS C:\Program Files\InfluxData\influxdb> ./influxd
+
+미세먼지 센서
+아날로그 데이터를 전압으로 표시한다.
+
+int Vo =A0; // 센서의 아날로그 출력 핀을 A0와 연결
+int V_LED = 2;
+
+float Vo_value = 0;
+
+void setup() {
+ 
+ Serial.begin(9600);
+ pinMode(V_LED, OUTPUT); // LED 제어핀을 OUTPUT모드로 설정
+ pinMode(Vo, INPUT); // 센서에서 데아터를 읽을 핀을 입력 모드로 설정
+
+}
+
+void loop() {
+  digitalWrite(V_LED,LOW); // LED를 켜서 측정 시작 미세먼지 센서는 Active Low 방식 작동
+  delayMicroseconds(280); // 0.28ms 기다림 (센서 내부 측정 시간)
+
+  Vo_value = analogRead(Vo); // 아날로그 값을 읽어 Vo_value에 저장
+  delayMicroseconds(40); // 0.04ms 기다림 (센서의 안정화 시간)
+  digitalWrite(V_LED, HIGH); // LED를 끄고 센서 대기 상태로 전환
+  delayMicroseconds(9680);
+  
+  Serial.println(Vo_value); // 측정된 값 출력
+  delay(1000);
+
+
+}
+
+int Vo =A0; // 센서의 아날로그 출력 핀을 A0와 연결
+int V_LED = 2;
+
+float Vo_value = 0; // 아날로그 값 (0~1023)
+float voltage = 0; // 변화된 전압값 (0~5V)
+float dustDensity = 0; // 최종 미세먼지 농도 값
+
+void setup() {
+ 
+ Serial.begin(9600);
+ pinMode(V_LED, OUTPUT); // LED 제어핀을 OUTPUT모드로 설정
+ pinMode(Vo, INPUT); // 센서에서 데아터를 읽을 핀을 입력 모드로 설정
+
+}
+
+void loop() {
+  digitalWrite(V_LED,LOW); // LED를 켜서 측정 시작 미세먼지 센서는 Active Low 방식 작동
+  delayMicroseconds(280); // 0.28ms 기다림 (센서 내부 측정 시간)
+
+  Vo_value = analogRead(Vo); // 아날로그 값을 읽어 Vo_value에 저장
+  delayMicroseconds(40); // 0.04ms 기다림 (센서의 안정화 시간)
+  digitalWrite(V_LED, HIGH); // LED를 끄고 센서 대기 상태로 전환
+  delayMicroseconds(9680);
+
+  voltage = Vo_value*5.0 / 1023.0; // 아날로그 데이터를 디지털로 변환한 후, 실제 전압 값(0~5V)로 변환
+  dustDensity = (voltage - 0.3) / 0.005; // 미세먼지 농도로 변환
+  
+  // 시리얼 모니터에 미세먼지 출력
+  Serial.println("dust= "); 
+  Serial.println(dustDensity);
+  delay(1000);
+
+
+}
