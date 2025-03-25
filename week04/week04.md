@@ -43,7 +43,7 @@ A4 -> SDA (데이터 선)
 A5 -> SCL (클럭 선)
 
 1602(16x2) LCD 의미
-LCD에 COLUMNS 16
+LCD에 COLUMNS 16개
 ROW가 2개
 
 
