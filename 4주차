@@ -1,1 +1,4 @@
 
+데이터 상태(SDA)가 LOW 이면 ACK , HIGH이면 NACK이다.
+A4 -> SDA
+A5 -> SCL
