@@ -1,5 +1,5 @@
-#include <Wire.h>
-#include <LiquidCrystal_I2C.h>
+#include <Wire.h> // I2C 통신을 위한 기본 라이브러리
+#include <LiquidCrystal_I2C.h> // I2C LCD 라이브러리
 
 LiquidCrystal_I2C lcd(0x27, 16,2);
 
