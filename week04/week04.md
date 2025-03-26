@@ -17,17 +17,17 @@
 - 데이터 상태(SDA)가 LOW 이면 ACK (성공) , HIGH이면 NACK(실패)이다.
 
 - I2C, UART, SPI 통신 비교
-I2C: 1:N, N:N
-UART: 1:1 통신
-SPI: 1:N 
-센서를 더 추가하는 경우 slave 갯수 만큼  ss라인이 더 필요하다.
+- I2C: 1:N, N:N
+- UART: 1:1 통신
+- SPI: 1:N 
+  센서를 더 추가하는 경우 slave 갯수 만큼  ss라인이 더 필요하다.
 
-A4 -> SDA (데이터 선)
-A5 -> SCL (클럭 선)
+- A4 -> SDA (데이터 선)
+- A5 -> SCL (클럭 선)
 
-1602(16x2) LCD 의미
-LCD에 COLUMNS 16개
-ROW가 2개
+- 1602(16x2) LCD 의미
+- LCD에 COLUMNS 16개
+  ROW가 2개
 
 
 
