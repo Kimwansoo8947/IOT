@@ -14,7 +14,7 @@ void setup()
 
 void loop()
 {
- 	lcd.setCursor(0,0); // 첫 번째 줄 첫 번째 칸(0,0)부터 출력
+ 	  lcd.setCursor(0,0); // 첫 번째 줄 첫 번째 칸(0,0)부터 출력
     lcd.print("Hello World!");
       
   	for(int position = 0; position <16; position++){ 
