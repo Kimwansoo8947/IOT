@@ -16,8 +16,8 @@ void setup()
 void loop()
 {
   
- 	lcd.setCursor(16,0); // 첫 번째 줄 첫 번째 칸(0,0)부터 출력
-  lcd.print("Hello, World!");
+   	lcd.setCursor(16,0); // 첫 번째 줄 첫 번째 칸(0,0)부터 출력
+    lcd.print("Hello, World!");
     
   	for(int position = 0; position<16; position++){
       lcd.scrollDisplayLeft(); // 한 칸씩 왼쪽으로 보냄
