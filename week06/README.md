@@ -22,16 +22,16 @@
 - 리눅스에서는 TAB을 잘 사용해야 된다.
 
 - vim test.c (c언어로 편집기 이동)
-  I -> INSERT
-  ESC -> Command 모드 (저장, 종료 가능)
-  :W :저장
-  :q : 종료
-  :wq : 저장 후 종료
+  - I -> INSERT
+  - ESC -> Command 모드 (저장, 종료 가능)
+  - :W :저장
+  - :q : 종료
+  - :wq : 저장 후 종료
 
 - 컴파일
-  gcc -o 실행파일이름 소스파일
-  ex) gcc -o test test.c
-  ls 명령어 사용 후
-  test.exe (실행 파일)
-  ./test.exe
-  vim test.c (다시 수정)
+  - gcc -o 실행파일이름 소스파일
+  - ex) gcc -o test test.c
+  - ls 명령어 사용 후
+  - test.exe (실행 파일)
+  - ./test.exe
+  - vim test.c (다시 수정)
