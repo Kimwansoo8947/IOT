@@ -33,11 +33,6 @@ private:
 
 #endif
 
-
-
-
-
-
 #include "LedToggle.h"
 
 LedToggle::LedToggle(int pin) {
