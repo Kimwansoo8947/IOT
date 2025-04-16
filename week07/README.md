@@ -5,7 +5,7 @@
 
   
 - 아두이노 파일 구조
-- ifndef는 # if not defined를 줄인말이다. 처음 #include항 후부터는 #ifndef가 거짓이 되므로 #include는 동작하지 않는다.
+- ifndef는 # if not defined를 줄인말이다. 처음 #include한 후부터는 #ifndef가 거짓이 되므로 #include는 동작하지 않는다.
 - 클래스 생성하기
 - class 명령어는 클래스를 정의한다.
 - 클래스는 함수가 아니라 명령어이므로 끝에 세미콜론을 붙인다.
