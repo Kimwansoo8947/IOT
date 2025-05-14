@@ -1,1 +1,15 @@
+- 라즈베리 파이에서 python 설치
+- pip install opencv-contrib-python (에러 발생)
+- sudo rm/usr/lib/python3.11/EXTERNALLY-MANAGED
+- sudo apt-get-install python3-opencv
 
+- 텔레그램 봇 설치
+- pip install python-telegram-bot 00upgrade git clone
+- https://github.com/python-telegram-bot/python-telegram-bot pip install python-telegram-bot[job-queue] --pre
+- ls
+- cd python-telegram-bot/examples
+- cd examples/timerbot에서 토근 변경한다.
+- vim timerbot.py로 들어가서 토큰을 적는다.
+- python timerbot.py
+- 텔레그램 내 봇에서 /start/ set 10
+- 10초마다 울린다.
