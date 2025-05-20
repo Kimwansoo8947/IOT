@@ -44,4 +44,4 @@ wget -q -O - https://apt.grafana.com/gpg.key | gpg --dearmor | sudo tee /etc/apt
 
 - influxdb import with python
   
-pip install influxdb
+ pip install influxdb
