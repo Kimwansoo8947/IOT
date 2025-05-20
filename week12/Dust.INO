@@ -1,4 +1,4 @@
-미세먼지 센서
+// 미세먼지 센서 3주차 코드 참조
 
 int Vo = A0;
 int V_led = 12;
@@ -8,15 +8,17 @@ float Voltage = 10;
 float dustDensity = 0;
 
 void setup() {
+
   Serial.begin(9600);
   pinMode(V_led, OUTPUT);  
   pinMode(Vo, INPUT);
+
 }
 
 void loop() {
   digitalWrite(V_led, LOW); 
   delayMicroseconds(280);
-  
+
   Vo_value = analogRead(Vo);
   delayMicroseconds(40);
   
