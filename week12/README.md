@@ -63,6 +63,13 @@ pip install influxdb
 ```
   sudo rm /usr/lib/python3.11/EXTERNALLY-MANAGED
 ```
+## influxDB Database 생성
+```
+$ Influx
+$ create database dust
+$ show databases
+$ exit
+```
 ## 문자열 처리와 형변환
 ```
 a = "300.0"
@@ -76,3 +83,16 @@ b = "dust = 300.0"
 print(b.split("=")[0]) # "문자열을 "=" 기준으로 나눈 뒤, 왼쪽 값 출력 -> "dust "
 
 ```
+## Grafana 접속
+localhost:3000
+username : admin , password : admin
+Connections -> Data sources
+InfluxDB
+InfluxDB 연결 설정
+http://localhost:8086
+Database : dust
+User : root, password : root
+select measurement -> dust
+tag -> inhaUni = 2222
+field(value) -> dust
+
