@@ -84,6 +84,7 @@ print(b.split("=")[0]) # "문자열을 "=" 기준으로 나눈 뒤, 왼쪽 값 �
 
 ```
 ## Grafana 접속
+```
 localhost:3000
 username : admin , password : admin
 Connections -> Data sources
@@ -95,4 +96,5 @@ User : root, password : root
 select measurement -> dust
 tag -> inhaUni = 2222
 field(value) -> dust
+```
 
