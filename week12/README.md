@@ -62,3 +62,17 @@ pip install influxdb
   - hint: See PEP 668 for the detailed specification.
 ```
   sudo rm /usr/lib/python3.11/EXTERNALLY-MANAGED
+
+## 문자열 처리와 형변환
+```
+a = "300.0"
+print(float(a)) # 문자열 "300.0"을 float형으로 변환 -> 300.0
+
+b = "dust = 300.0"
+print(b.split("=")[1]) # "문자열을 "=" 기준으로 나눈 뒤, 오른 쪽 값 출력 -> " 300.0"
+
+ex)
+b = "dust = 300.0"
+print(b.split("=")[0]) # "문자열을 "=" 기준으로 나눈 뒤, 왼쪽 값 출력 -> "dust "
+
+```
