@@ -41,3 +41,6 @@ wget -q -O - https://apt.grafana.com/gpg.key | gpg --dearmor | sudo tee /etc/apt
 
 5. Run the following command to server start
 - sudo systemctl start grafana-server
+
+- influxdb import with python
+pip install influxdb
