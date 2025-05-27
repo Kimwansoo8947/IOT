@@ -1,1 +1,4 @@
-
+- Cygwin
+- cd /opt/tinyos-2.x/apps/Blink // Cygwin에서 TinyOS가 제대로 설치되었는지 확인하는 명령어
+- make telosb // 컴파일 하는 명령어
+- make telosb install.16 // 노드 ID 16번으로 업로드하는 명령어
