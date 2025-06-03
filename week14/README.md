@@ -1,4 +1,5 @@
-###
+## Wi-Fi
+```
 Wi-Fi 구성
 AP (Access Point)와 station(STA)으로 구성
   - AP: 유무선 공유기
@@ -16,10 +17,11 @@ Wi-Fi Service Set
 MAC 방식
   -PCF => 중앙 집중식
   -DCF => CSMA/CA 사용 (Wi-Fi MAC 방식 중에 주로 사용됨)
-###
+```
 
-###
-MAC 계층
+
+## MAC 계층
+```
 CSMA-CA
 CA : 충돌 회피
 CSMA-CD와 다르게 충돌 감지를 하지 못함
@@ -38,7 +40,7 @@ CSMA-CA의 CSMA-CD와 비교한 장단점
 - 장점: 저 가격으로 구현
 - 단점: 데이터 전송이 많이 지연될 수 있다.
 
-###
+```
 ### 
 
 
